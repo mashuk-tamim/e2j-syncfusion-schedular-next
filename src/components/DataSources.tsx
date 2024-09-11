@@ -5,8 +5,6 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 9, 30),
 		EndTime: new Date(2018, 3, 4, 10, 30),
 		IsAllDay: false,
-		ProjectId: 2,
-		TaskId: 2,
 	},
 	{
 		Id: 62,
@@ -14,8 +12,6 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 13, 30),
 		EndTime: new Date(2018, 3, 4, 16, 30),
 		IsAllDay: false,
-		ProjectId: 2,
-		TaskId: 1,
 	},
 	{
 		Id: 63,
@@ -23,8 +19,6 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 9),
 		EndTime: new Date(2018, 3, 4, 10, 30),
 		IsAllDay: false,
-		ProjectId: 1,
-		TaskId: 1,
 	},
 	{
 		Id: 64,
@@ -32,8 +26,6 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 12),
 		EndTime: new Date(2018, 3, 4, 13),
 		IsAllDay: false,
-		ProjectId: 1,
-		TaskId: 1,
 	},
 	{
 		Id: 65,
@@ -41,8 +33,6 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 15),
 		EndTime: new Date(2018, 3, 4, 18),
 		IsAllDay: false,
-		ProjectId: 1,
-		TaskId: 1,
 	},
 	{
 		Id: 66,
@@ -50,8 +40,6 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 14),
 		EndTime: new Date(2018, 3, 4, 16),
 		IsAllDay: false,
-		ProjectId: 1,
-		TaskId: 2,
 	},
 	{
 		Id: 67,
@@ -59,8 +47,8 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 14, 30),
 		EndTime: new Date(2018, 3, 4, 18, 30),
 		IsAllDay: false,
-		ProjectId: 2,
-		TaskId: 2,
+		Status: "Completed",
+		Priority: "High",
 	},
 	{
 		Id: 68,
@@ -68,8 +56,6 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 17, 30),
 		EndTime: new Date(2018, 3, 4, 19, 30),
 		IsAllDay: false,
-		ProjectId: 1,
-		TaskId: 2,
 	},
 	{
 		Id: 70,
@@ -77,10 +63,16 @@ export let timelineResourceData: Object[] = [
 		StartTime: new Date(2018, 3, 4, 18, 30),
 		EndTime: new Date(2018, 3, 4, 20),
 		IsAllDay: false,
-		ProjectId: 2,
-		TaskId: 1,
 		RecurrenceRule: "FREQ=DAILY;INTERVAL=1;COUNT=5",
-		RecurrenceException: "20180405T043000Z",
+		RecurrenceException: "20180406T043000Z",
 		/**For example, 22nd February 2018 can be represented as 20180222. Also, the time part being represented in UTC format needs to add "T" at the start and “Z” after the time portion with no space. “07:30:00 UTC” is therefore represented as “073000Z”. */
+	},
+	{
+		Id: 71,
+		Subject: "Bug Automation",
+		StartTime: new Date(2018, 3, 6, 14, 30),
+		EndTime: new Date(2018, 3, 6, 16, 30),
+		Description: "Meeting time changed based on team activities.",
+		RecurrenceID: 3,
 	},
 ];

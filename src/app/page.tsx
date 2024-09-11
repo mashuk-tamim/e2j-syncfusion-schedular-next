@@ -22,7 +22,7 @@ export default function Home() {
 	const eventSettings: EventSettingsModel = {
 		dataSource: timelineResourceData,
 	};
-	const group = { byGroupID: false };
+	// const group = { byGroupID: false };
 
 	const projectData: Object[] = [
 		{ text: "PROJECT 1", id: 1, color: "#cb6bb2" },
@@ -37,21 +37,23 @@ export default function Home() {
 		<>
 			<h2 className="mb-20">Syncfusion React Schedule Component</h2>
 			<ScheduleComponent
-				width="96%"
+				width="100%"
 				height="550px"
 				currentView="Month"
 				selectedDate={new Date(2018, 3, 4)}
 				eventSettings={eventSettings}
-				group={group}
-				className="mx-auto"
+				// group={group}
+				className="p-5"
+				allowMultiDrag={true}
 			>
 				<ViewsDirective>
 					<ViewDirective option="Week" />
 					<ViewDirective option="Month" />
 					<ViewDirective option="Agenda" />
 					<ViewDirective option="MonthAgenda" />
+					<ViewDirective option="TimelineDay" />
 				</ViewsDirective>
-				<ResourcesDirective>
+				{/* <ResourcesDirective>
 					<ResourceDirective
 						field="ProjectId"
 						title="Choose Project"
@@ -72,9 +74,17 @@ export default function Home() {
 						idField="id"
 						colorField="color"
 					></ResourceDirective>
-				</ResourcesDirective>
+				</ResourcesDirective> */}
 				<Inject
-					services={[Week, Month, Agenda, Resize, DragAndDrop, MonthAgenda, WorkWeek]}
+					services={[
+						Week,
+						Month,
+						Agenda,
+						Resize,
+						DragAndDrop,
+						MonthAgenda,
+						WorkWeek,
+					]}
 				/>
 			</ScheduleComponent>
 		</>
